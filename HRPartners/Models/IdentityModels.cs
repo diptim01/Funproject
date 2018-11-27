@@ -24,10 +24,18 @@ namespace HRPartners.Models
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
+        public virtual DbSet<PartnerModel> PartnerModel { get; set; }
+        public virtual DbSet<Nexs> Nexs { get; set; }
+        public virtual DbSet<ExpenditueModel> ExpenditueModel { get; set; }
+        public virtual DbSet<SeismicModel> SeismicModel { get; set; }
+        public virtual DbSet<FicsModel> FicsModel { get; set; }
+        public virtual DbSet<Budget> Budget { get; set; }
+
 
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
         }
     }
+
 }

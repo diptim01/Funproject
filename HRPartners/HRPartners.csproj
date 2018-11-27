@@ -244,9 +244,31 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PartnersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811271209389_ModelCreation.cs" />
+    <Compile Include="Migrations\201811271209389_ModelCreation.Designer.cs">
+      <DependentUpon>201811271209389_ModelCreation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811271218482_retest.cs" />
+    <Compile Include="Migrations\201811271218482_retest.Designer.cs">
+      <DependentUpon>201811271218482_retest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811271219274_retest1.cs" />
+    <Compile Include="Migrations\201811271219274_retest1.Designer.cs">
+      <DependentUpon>201811271219274_retest1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811271229297_ok.cs" />
+    <Compile Include="Migrations\201811271229297_ok.Designer.cs">
+      <DependentUpon>201811271229297_ok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811271237088_correctedMigration.cs" />
+    <Compile Include="Migrations\201811271237088_correctedMigration.Designer.cs">
+      <DependentUpon>201811271237088_correctedMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Budget.cs" />
     <Compile Include="Models\ExpenditueModel.cs" />
@@ -255,6 +277,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Nexs.cs" />
     <Compile Include="Models\PartnerModel.cs" />
+    <Compile Include="Models\Roles.cs" />
     <Compile Include="Models\SeismicModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -319,6 +342,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Partners\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -330,6 +354,23 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201811271209389_ModelCreation.resx">
+      <DependentUpon>201811271209389_ModelCreation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811271218482_retest.resx">
+      <DependentUpon>201811271218482_retest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811271219274_retest1.resx">
+      <DependentUpon>201811271219274_retest1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811271229297_ok.resx">
+      <DependentUpon>201811271229297_ok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811271237088_correctedMigration.resx">
+      <DependentUpon>201811271237088_correctedMigration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
