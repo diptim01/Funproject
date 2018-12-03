@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "TestFileUploadsAndForm";
+}
+
+<br />
+<p></p>
+
+@using (Html.BeginForm("TestFileUploadsAndForm", "Partners", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <label>Name </label>
+    <input type="text" name="userName" placeholder="Enter your name" />
+    <p></p>
+    <div for="file" style="display:inline-block">
+        <label>Upload an image</label>
+        <input type="file" name="file"/>
+    </div>
+<p></p>
+    
+    <button type="submit">Upload now</button> 
+    <label>@ViewBag.ErrorMsg</label>
+
+    <img src="@((ViewBag.myimage != null) ? Url.Content("~/Images/"+ViewBag.myimage):"")" />
+}
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            type: "POST",
+            url: "@Url.Action("aResponse", "Partners")",
+            data: {okay: "yeaah"},
+            success: function (data) {
+                var okies = JSON.stringify(data);
+                alert(data.name);
+            }
+
+
+        });
+    });
+
+</script>
+
